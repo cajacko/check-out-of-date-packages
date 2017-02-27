@@ -40,6 +40,7 @@
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.10.0",
+    "inquirer": "3.0.4",
     "npm-check": "5.4.0",
     "winston": "2.3.1"
   }
