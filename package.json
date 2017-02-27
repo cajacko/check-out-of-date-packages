@@ -1,6 +1,6 @@
 {
   "name": "check-out-of-date-packages",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Checks out of date npm packages and prompts to continue",
   "author": "Charlie Jackson <contact@charliejackson.com> (https://charliejackson.com)",
   "license": "MIT",
