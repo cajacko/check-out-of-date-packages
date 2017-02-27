@@ -41,6 +41,7 @@
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.10.0",
     "inquirer": "3.0.4",
+    "is-global": "0.1.0",
     "npm-check": "5.4.0",
     "winston": "2.3.1"
   }

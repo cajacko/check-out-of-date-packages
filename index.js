@@ -2,6 +2,7 @@ const npmCheck = require('npm-check');
 const winston = require('winston');
 const inquirer = require('inquirer');
 const fs = require('fs');
+const isGlobal = require('is-global');
 
 function isAuthor(npmPackage, checkAuthor) {
   if (!checkAuthor) {
@@ -44,7 +45,15 @@ module.exports = function checkPackages(cwd, author) {
     let needUpdating = false;
 
     npmPackages.forEach((npmPackage) => {
-      const npmPackageConfigPath = `${cwd}node_modules/${npmPackage.moduleName}/package.json`;
+      let npmPackageConfigPath;
+
+
+      if (isGlobal()) {
+        npmPackageConfigPath = `${cwd}../${npmPackage.moduleName}/package.json`;
+      } else {
+        npmPackageConfigPath = `${cwd}node_modules/${npmPackage.moduleName}/package.json`;
+      }
+
       const npmPackageConfig = JSON.parse(fs.readFileSync(npmPackageConfigPath, 'utf8'));
 
       if (author && !isAuthor(npmPackageConfig, author)) {
