@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+  "rules": {
+      "comma-dangle": "off", // keeping to comma dangle threw an error when running yeoman generators, so turned it off
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allowAfterThis": true // Needed as yeoman considers methods starting with _ as private
+        }
+      ]
+  }
+}
