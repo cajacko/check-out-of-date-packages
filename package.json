@@ -2,16 +2,14 @@
   "name": "check-out-of-date-packages",
   "version": "1.0.0",
   "description": "Checks out of date npm packages and prompts to continue",
-  "author": {
-    "name": "Charlie Jackson",
-    "email": "contact@charliejackson.com",
-    "url": "https://charliejackson.com"
-  },
+  "author": "Charlie Jackson <contact@charliejackson.com> (https://charliejackson.com)",
   "license": "MIT",
-  "keywords": "npm,javascript,node,nodejs",
+  "keywords": [
+    "npm,javascript,node,nodejs"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cajacko/check-out-of-date-packages.git"
+    "url": "git+https://github.com/cajacko/check-out-of-date-packages.git"
   },
   "homepage": "https://github.com/cajacko/check-out-of-date-packages#readme",
   "scripts": {
@@ -25,8 +23,8 @@
     "node": ">=6.9.1"
   },
   "bugs": {
-    "email": "contact@charliejackson.com",
-    "url": "https://github.com/cajacko/check-out-of-date-packages/issues"
+    "url": "https://github.com/cajacko/check-out-of-date-packages/issues",
+    "email": "contact@charliejackson.com"
   },
   "devDependencies": {
     "eslint": "3.16.1",
@@ -34,5 +32,15 @@
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.10.0"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "3.16.1",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.10.0",
+    "npm-check": "5.4.0",
+    "winston": "2.3.1"
   }
 }
