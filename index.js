@@ -60,9 +60,17 @@ module.exports = function checkPackages(cwd, author) {
         return true;
       }
 
-      if (npmPackage.latest !== npmPackage.installed) {
+      if (!npmPackageConfig) {
+        throw new Error(`Could not get package.json for ${packageJson.name}`);
+      }
+
+      if (!npmPackageConfig.version) {
+        throw new Error(`Could not get package version for ${packageJson.name}`);
+      }
+
+      if (npmPackage.latest !== npmPackageConfig.version) {
         needUpdating = true;
-        winston.log('info', `${packageJson.name} Package out of date: ${npmPackage.moduleName} ${npmPackage.installed} -> ${npmPackage.latest}`);
+        winston.log('info', `${packageJson.name} Package out of date: ${npmPackage.moduleName} ${npmPackageConfig.version} -> ${npmPackage.latest}`);
         return false;
       }
 
